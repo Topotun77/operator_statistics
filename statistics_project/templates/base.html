@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>
+      {% block title %} Звонки {% endblock %}
+    </title>
+      <link rel="stylesheet" type="text/css" href='{% static "style-day.css" %}'>
+    <link rel="icon" href="{% static 'favicon.ico' %}" />
+</head>
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+<br>  <hr>
+</body>
+</html>

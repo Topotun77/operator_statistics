@@ -1,0 +1,68 @@
+2025-01-15 15:36:27,350 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-01-15 15:44:04,997 | INFO | django.utils.autoreload | L:\Python\UU-kurs\operator_statistics\statistics_project\oper_stat\crud_func.py changed, reloading.
+2025-01-15 15:44:05,434 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-01-15 15:44:23,975 | ERROR | root | Ошибка выполнения запроса: ('ОШИБКА:  ошибка синтаксиса (примерное положение: "AND")\nLINE 5: WHERE success = TRUE AND b.received_date >= ? AND b.received...\n                                                      ^\n',)
+2025-01-15 15:50:30,246 | INFO | django.utils.autoreload | L:\Python\UU-kurs\operator_statistics\statistics_project\oper_stat\crud_func.py changed, reloading.
+2025-01-15 15:50:30,675 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-01-15 15:50:59,599 | INFO | django.utils.autoreload | L:\Python\UU-kurs\operator_statistics\statistics_project\oper_stat\crud_func.py changed, reloading.
+2025-01-15 15:50:59,994 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-01-15 15:51:06,872 | ERROR | root | Ошибка выполнения запроса: ('ОШИБКА:  ошибка синтаксиса (примерное положение: "AND")\nLINE 5: WHERE success = TRUE AND b.received_date >= ? AND b.received...\n                                                      ^\n',)
+2025-01-15 15:53:34,799 | INFO | django.utils.autoreload | L:\Python\UU-kurs\operator_statistics\statistics_project\oper_stat\crud_func.py changed, reloading.
+2025-01-15 15:53:35,209 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-01-15 15:53:41,776 | ERROR | root | Ошибка выполнения запроса: ('ОШИБКА:  ошибка синтаксиса (примерное положение: "AND")\nLINE 5: WHERE success = TRUE AND b.received_date >= ? AND b.received...\n                                                      ^\n',)
+2025-01-15 16:12:43,341 | ERROR | root | Ошибка выполнения запроса: ("ОШИБКА:  функция to_date(date, unknown) не существует\nLINE 5: WHERE success = true AND b.received_date BETWEEN to_date('20...\n                                                         ^\nHINT:  Функция с данными именем и типами аргументов не найдена. Возможно, вам следует добавить явные приведения типов.\n",)
+2025-01-15 16:12:43,369 | ERROR | django.request | Internal Server Error: /report/form/
+Traceback (most recent call last):
+  File "L:\Python\UU-kurs\operator_statistics\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedFunction: ОШИБКА:  функция to_date(date, unknown) не существует
+LINE 5: WHERE success = true AND b.received_date BETWEEN to_date('20...
+                                                         ^
+HINT:  Функция с данными именем и типами аргументов не найдена. Возможно, вам следует добавить явные приведения типов.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\Python\UU-kurs\operator_statistics\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Python\UU-kurs\operator_statistics\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Python\UU-kurs\operator_statistics\statistics_project\oper_stat\views.py", line 56, in report_form
+    report = read_report_oper_with_date(from_date, to_date, oper=form.data.get('operator'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Python\UU-kurs\operator_statistics\statistics_project\oper_stat\crud_func.py", line 73, in read_report_oper_with_date
+    cursor.execute(query[0], (date(2025, 1, 1), date(2025, 1, 15)))
+  File "L:\Python\UU-kurs\operator_statistics\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Python\UU-kurs\operator_statistics\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Python\UU-kurs\operator_statistics\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Python\UU-kurs\operator_statistics\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "L:\Python\UU-kurs\operator_statistics\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\Python\UU-kurs\operator_statistics\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: ОШИБКА:  функция to_date(date, unknown) не существует
+LINE 5: WHERE success = true AND b.received_date BETWEEN to_date('20...
+                                                         ^
+HINT:  Функция с данными именем и типами аргументов не найдена. Возможно, вам следует добавить явные приведения типов.
+
+2025-01-15 17:00:22,049 | INFO | django.utils.autoreload | L:\Python\UU-kurs\operator_statistics\statistics_project\statistics_project\urls.py changed, reloading.
+2025-01-15 17:00:22,464 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-01-15 17:11:33,303 | WARNING | django.request | Not Found: /favicon.ico
+2025-01-15 17:43:16,815 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-01-15 17:44:45,293 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-01-15 17:49:39,903 | INFO | django.utils.autoreload | L:\Python\UU-kurs\operator_statistics\statistics_project\oper_stat\admin.py changed, reloading.
+2025-01-15 17:49:40,346 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-01-15 17:51:27,019 | INFO | django.utils.autoreload | L:\Python\UU-kurs\operator_statistics\statistics_project\statistics_project\settings.py changed, reloading.
+2025-01-15 17:51:27,484 | INFO | django.utils.autoreload | Watching for file changes with StatReloader

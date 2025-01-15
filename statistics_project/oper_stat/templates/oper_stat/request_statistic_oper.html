@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+    Главная страница
+{% endblock %}
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+      <table>
+        {{ form.as_table }}
+      </table>
+      <br>
+      <button type="submit">Запрос статистики</button>
+  </form>
+{% endblock %}
