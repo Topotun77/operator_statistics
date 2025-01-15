@@ -20,13 +20,13 @@ Django приложение для формирования статистики
 - Ведется логирование ошибок.  
 
 ### Скриншот страницы с формой запроса:
-![img01](https://github.com/Topotun77/operator_statistics/blob/master/ScreenShots/n001.JPG?raw=true)
+![img01](https://github.com/Topotun77/operator_statistics/blob/master/ScreenShots/001.JPG?raw=true)
 ### Страница приветствия:
-![img02](https://github.com/Topotun77/operator_statistics/blob/master/ScreenShots/n002.JPG?raw=true)
+![img02](https://github.com/Topotun77/operator_statistics/blob/master/ScreenShots/002.JPG?raw=true)
 ### Вывод данных в формате json:
-![img03](https://github.com/Topotun77/operator_statistics/blob/master/ScreenShots/n003.JPG?raw=true)
+![img03](https://github.com/Topotun77/operator_statistics/blob/master/ScreenShots/003.JPG?raw=true)
 ### Административная панель:
-![img04](https://github.com/Topotun77/operator_statistics/blob/master/ScreenShots/n004.JPG?raw=true)
+![img04](https://github.com/Topotun77/operator_statistics/blob/master/ScreenShots/004.JPG?raw=true)
 
 ## Для запуска:
 1. Установите все необходимые зависимости, выполнив команду:  
