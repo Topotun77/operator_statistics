@@ -45,7 +45,7 @@ python manage.py runserver
 ```  
 4. Для запуска на сервере используйте команду:  
 ```
-cd board_project && gunicorn board_project.wsgi:application  --bind 0.0.0.0:80
+cd statistics_project && gunicorn statistics_project.wsgi:application  --bind 0.0.0.0:80
 ```
 
 
