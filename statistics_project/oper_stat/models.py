@@ -1,5 +1,4 @@
 from django.db import models
-from django.forms import JSONField
 
 
 class Call(models.Model):
@@ -12,9 +11,10 @@ class Call(models.Model):
     operator = models.CharField(max_length=100, null=True, blank=True)
     processed = models.BooleanField(default=False)
     status = models.CharField(max_length=250, null=True, blank=True)
-    # Видимо, следующее поле д.б. связано с таблицей Task, но для базы в ТЗ не указана
+    # Видимо, следующее поле д.б. связано с таблицей Base, но для базы в ТЗ не указана
     # уникальность поля Идентификатор и тип указан текстовый. Т.е. не совсем понятно,
     # что такое "база" и "кампания"? Связь, все-таки, идет по "кампании" или по "базе"?
+    # Если по "база", то почему поле м.б. пустым?
     base = models.CharField(max_length=300, null=True, blank=True)
     duration = models.IntegerField(null=True, blank=True)
     success = models.BooleanField(default=False)
@@ -25,7 +25,7 @@ class Call(models.Model):
         db_table = 'call'
 
     def __str__(self):
-        return f"{self.operator} ({self.number})"
+        return f"{self.operator} ({self.number}, {self.campaign})"
 
 
 class Base(models.Model):
@@ -33,7 +33,7 @@ class Base(models.Model):
     id = models.CharField(max_length=300, unique=True, primary_key=True)
     campaign = models.CharField(max_length=100)
     received_date = models.DateField()
-    parameters = JSONField()
+    parameters = models.JSONField()
     task = models.CharField(max_length=100, null=True, blank=True)
 
     class Meta:
